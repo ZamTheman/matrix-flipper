@@ -1,11 +1,17 @@
 Project is using an Angular front-end, .NET5 back-end and SQL-Server for storage.
 
+Prerequisites:
+Node 16.3 and updated version of NPM
+Updated version of Angular and Angular CLI
+DOTNET5
+SQL Server
+Use Import Data-Tier application in MSSM to restore the matrix-flipper-db.bacpac file
+
 Url for API can be set in the environment.ts files. Current values is for a localhost VisualStudio running the API.
 Database connection string can be set in the appsettings.json.
-Project also contains a matrix-flipper-db.dacpac for restoring a db with table and a few initial matrix configurations.
 
 Considerations done:
-The front-end is created to be able to be used from a desktop computer screen down to a rather small mobile phone. The limiting factor will be when it is no longer viable to click the individual cells. It also built with support for other sizes than 6 * 6 since that seems to be a natural next step. An enum is used for the states to make it rather easy to add aditional ones when needed.
+The front-end is created to be able to be used from a desktop computer screen down to a rather small mobile phone. The limiting factor will be when it is no longer viable to click the individual cells. It also built with support for other sizes than 6x6 since that seems to be a natural next step. An enum is used for the states to make it rather easy to add aditional ones when needed.
 
 The back-end is using a simple 3 layer architecture with Controller, Services and DataAccess. I have used dependency injection to avoid hard couplings and for potential unit-tests of individual classes. 
 
