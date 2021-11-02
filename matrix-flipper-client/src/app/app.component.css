@@ -1,0 +1,171 @@
+@import url('https://css.gg/css');
+
+.matrix {
+    margin: 5vh auto;
+    margin-bottom: 3vh;
+    height: 25vh;
+    width: 75vw;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 1vw;
+}
+
+.container {
+    width: 100%;
+}
+
+.cell {
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+}
+
+.cell:hover {
+    cursor: pointer;
+}
+
+.untouched {
+    background-color: #eee;
+    transition: all .25s linear;
+}
+
+.ok {
+    background-color: #009e0f;
+    transition: all .25s linear;
+}
+
+.error {
+    background-color: #cf2a27;
+    transition: all .25s linear;
+}
+
+.input-row {
+    margin: 0 auto;
+    margin-bottom: 2em;
+    width: 75vw;
+}
+
+.input-row input {
+    width: calc(100% - 100px);
+    padding-left: 0.5em;
+    height: 2em;
+}
+
+.input-row button {
+    margin-left: 10px;
+}
+
+button {
+    padding: 0.5em 1em;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-width: 1px;
+    background-color: white;
+}
+
+button:hover:enabled {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.configurations {
+    margin: 0 auto;
+    width: 75vw;
+}
+
+.configuration .content {
+    margin: 1.5em auto;
+}
+
+.configuration .content button {
+    margin-top: -0.75em;
+    margin-left: 1em;
+    font-size: 1.25em;
+}
+
+.configuration .content p {
+    margin-left: 1em;
+    font-size: 1.25em;
+    display: inline-block;
+}
+
+.configuration .content span {
+    vertical-align: middle;
+}
+
+.button-row {
+    display: block;
+    float: right;
+}
+
+.icon {
+    display: inline-block;
+    margin-top: -4px;
+    height: 22px;
+    margin-right: 5px;
+    color: gray;
+    vertical-align: middle;
+}
+
+@media (max-width: 900px) {
+    .matrix {
+        margin: 1vh auto;
+        margin-bottom: 1.5vh;
+        height: 25vh;
+        width: 90vw;
+    }
+
+    .input-row {
+        margin: 0 auto;
+        margin-bottom: 1em;
+        width: 90vw;
+    }
+
+    .configurations {
+        margin: 0 auto;
+        width: 90vw;
+    }
+    
+    .configuration .content p {
+        margin-left: 1em;
+        font-size: 1em;
+    }
+
+    .configuration .content button {
+        margin-left: 0.25em;
+        font-size: 0.75em;
+    }
+
+    .configuration .content {
+        margin: 0.75em auto;
+    }
+
+    .button-row {
+        margin-top: -3px;
+    }
+
+    .icon {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .configuration .content p {
+        margin-left: 1em;
+        font-size: 1em;
+        display: block;
+        float: none;
+    }
+
+    .button-row {
+        margin-top: 0.5em;
+        display: block;
+        float: none;
+    }
+
+    .configuration .content button {
+        margin-left: 1em;
+        font-size: 0.75em;
+    }
+}

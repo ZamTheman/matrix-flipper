@@ -1,0 +1,27 @@
+<div class="container">
+  <section class="matrix">
+    <div
+      *ngFor="let tile of currentMatrix.tiles"
+      [ngClass]="{ 'untouched': tile.state == 0, 'error': tile.state == 1, 'ok': tile.state == 2, 'cell': true }"
+      [ngStyle]="{ 'height' : cellHeight, 'width' : cellWidth }"
+      (click)="cellClicked(tile)">
+    </div>
+  </section>
+  <section class="input-row">
+    <input type="text" placeholder="Enter name" maxlength="30" [(ngModel)]="matrixName">
+    <button [disabled]="!canSave()" (click)="saveButtonClicked()">Save</button>
+  </section>
+  <section class="configurations">
+    <hr>
+    <article class="configuration" *ngFor="let matrix of matrices">
+      <div class="content">
+        <p>{{ matrix.name }}</p>
+        <div class="button-row">
+          <button (click)="activateButtonClicked(matrix.name)"><i class="gg-arrow-up icon"></i><span>Activate</span></button>
+          <button (click)="deleteButtonClicked(matrix.name)"><i class="gg-close-o icon"></i><span>Delete</span></button>
+        </div>
+      </div>
+      <hr>
+    </article>
+  </section>
+</div>
